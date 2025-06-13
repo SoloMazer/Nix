@@ -4,16 +4,16 @@
 
     enable = true;
     defaultEditor = true;
-    
+
     extraPackages = with pkgs; [
       rust-analyzer
-      blueprint-compiler
       nixd
+      tinymist
     ];
 
     settings = {
 
-      theme = "nord_transparent";
+      theme = "gruvbox_transparent";
 
       # keys.normal = {
       #   left = ":echo 'Use h instead!'";
@@ -56,8 +56,8 @@
     };
 
     themes = {
-      nord_transparent = {
-        "inherits" = "nord";
+      gruvbox_transparent = {
+        "inherits" = "gruvbox";
         "ui.background" = { };
       };
     };

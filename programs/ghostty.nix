@@ -1,13 +1,11 @@
 { config, pkgs, ... }:
 {
 
-  home.packages = with pkgs; [
-    ghostty
-  ];
+  programs.ghostty.enable = true;
 
   home.file = {
     ".config/ghostty/config".text = ''
-      theme = nord
+      theme = GruvboxDark
       font-family = Hurmit Nerd Font
       font-size = 12
       gtk-titlebar = false

@@ -4,7 +4,6 @@
 , ...
 }:
 {
-
   imports = [
     ./programs/helix.nix
     ./programs/fish.nix
@@ -12,7 +11,7 @@
     ./programs/firefox.nix
     ./programs/steam.nix
     ./programs/git.nix
-    # ./programs/zen-browser.nix #wait till its in nixpkgs
+    ./programs/gnome.nix
   ];
 
   home.username = "solomazer";
@@ -23,9 +22,11 @@
 
     discord
     obsidian
+    google-chrome
 
     rnote
     vlc
+    loupe
     wike
     varia
     nerd-fonts.hurmit
@@ -34,36 +35,21 @@
     endeavour
     papers
     deja-dup
-    cantarell-fonts
+    libertinus
+
 
     typst
     restic
     wl-clip-persist
 
-    gnomeExtensions.blur-my-shell
   ];
 
   home.sessionVariables = {
     EDITOR = "hx";
-    # BROWSER = "flatpak run app.zen_browser.zen";
+    BROWSER = "firefox";
+    TERMINAL = "ghostty";
   };
 
-  gtk = {
-    enable = true;
-    theme.name = "Adwaita-dark";
-    iconTheme = {
-      package = pkgs.papirus-icon-theme;
-      name = "Papirus-Dark";
-    };
-    cursorTheme = {
-      package = pkgs.bibata-cursors;
-      name = "Bibata-Modern-Ice";
-    };
-  };
-
-  #TODO: Add gnome desktop settings here
-  # dconf.settings = {};
-
-  # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
+
