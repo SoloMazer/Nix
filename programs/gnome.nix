@@ -1,4 +1,5 @@
 { pkgs, ... }: {
+
   home.packages = with pkgs; [
     cantarell-fonts
     gnome-tweaks
@@ -32,6 +33,5 @@
         gtk-application-prefer-dark-theme=1
       '';
     };
-    
   };
 }

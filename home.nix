@@ -1,11 +1,10 @@
-{ pkgs
-, ...
-}:
+{ pkgs, ... }:
 {
   imports = [
     ./programs/helix.nix
     ./programs/ghostty.nix
-    ./programs/firefox.nix
+    ./programs/librewolf.nix
+    ./programs/chromium.nix
     ./programs/steam.nix
     ./programs/utils.nix
     ./programs/gnome.nix

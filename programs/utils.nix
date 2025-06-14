@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ pkgs, ... }: {
 
   programs.fish = {
     enable = true;
@@ -20,7 +20,7 @@
       }
     ];
   };
-  
+
   programs.git = {
     enable = true;
     userName = "SoloMazer";
@@ -39,7 +39,7 @@
       fg = "#ebdbb2";
       bg = "#282828";
       hl = "#fabd2f";
-      "fg+" ="#ebdbb2";
+      "fg+" = "#ebdbb2";
       "bg+" = "#3c3836";
       "hl+" = "#fabd2f";
       info = "#83a598";
@@ -60,5 +60,5 @@
   programs.fd.enable = true;
   programs.ripgrep.enable = true;
   programs.gitui.enable = true;
-  
+
 }
