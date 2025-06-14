@@ -2,7 +2,6 @@
 
   home.packages = with pkgs; [
     cantarell-fonts
-    gnome-tweaks
     gnomeExtensions.blur-my-shell
   ];
 

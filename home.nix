@@ -16,9 +16,7 @@
 
   home.packages = with pkgs; [
 
-    discord
     obsidian
-    google-chrome
 
     rnote
     vlc
@@ -32,11 +30,6 @@
     papers
     deja-dup
     amberol
-
-    libertinus
-    typst
-    restic
-    wl-clip-persist
 
   ];
 

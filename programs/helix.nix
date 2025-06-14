@@ -10,21 +10,23 @@
       nixd
       nil
       tinymist
+      marksman
+      markdown-oxide
+      texlab
     ];
 
     settings = {
 
       theme = "gruvbox_transparent";
 
-      # keys.normal = {
-      #   left = ":echo 'Use h instead!'";
-      #   down = ":echo 'Use j instead!'";
-      #   up = ":echo 'Use k instead!'";
-      #   right = ":echo 'Use l instead!'";
-      # };
+      keys.normal = {
+        "up" = "no_op";
+        "down" = "no_op";
+        "left" = "no_op";
+        "right" = "no_op";
+      };
 
       editor = {
-
         mouse = false;
         line-number = "relative";
         gutters = [ "diagnostics" "line-numbers" "spacer" "diff" ];

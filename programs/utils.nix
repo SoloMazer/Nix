@@ -1,5 +1,9 @@
 { pkgs, ... }: {
 
+  home.packages = with pkgs; [
+    wl-clip-persist
+  ];
+
   programs.fish = {
     enable = true;
     preferAbbrs = true;
