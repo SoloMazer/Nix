@@ -8,6 +8,7 @@
     extraPackages = with pkgs; [
       rust-analyzer
       nixd
+      nil
       tinymist
     ];
 
@@ -32,6 +33,7 @@
 
         lsp = {
           display-messages = true;
+          auto-signature-help = false;
           display-inlay-hints = true;
           snippets = true;
         };

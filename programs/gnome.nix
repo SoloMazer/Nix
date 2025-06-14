@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }: {
+{ pkgs, ... }: {
   home.packages = with pkgs; [
     cantarell-fonts
     gnome-tweaks
@@ -20,5 +20,18 @@
       package = pkgs.bibata-cursors;
       name = "Bibata-Modern-Ice";
     };
+
+    gtk3.extraConfig = {
+      Settings = ''
+        gtk-application-prefer-dark-theme=1
+      '';
+    };
+
+    gtk4.extraConfig = {
+      Settings = ''
+        gtk-application-prefer-dark-theme=1
+      '';
+    };
+    
   };
 }

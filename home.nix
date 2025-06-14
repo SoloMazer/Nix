@@ -1,16 +1,13 @@
-{ config
-, pkgs
-, inputs
+{ pkgs
 , ...
 }:
 {
   imports = [
     ./programs/helix.nix
-    ./programs/fish.nix
     ./programs/ghostty.nix
     ./programs/firefox.nix
     ./programs/steam.nix
-    ./programs/git.nix
+    ./programs/utils.nix
     ./programs/gnome.nix
   ];
 
@@ -35,9 +32,9 @@
     endeavour
     papers
     deja-dup
+    amberol
+
     libertinus
-
-
     typst
     restic
     wl-clip-persist
@@ -52,4 +49,5 @@
 
   programs.home-manager.enable = true;
 }
+
 
