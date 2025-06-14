@@ -47,6 +47,20 @@
     TERMINAL = "ghostty";
   };
 
+  # Enable Automatic Updates
+  services.home-manager.autoUpgrade = {
+    enable = true;
+    frequency = "daily";
+  };
+
+  # Enable Autoexpire in home manager
+  services.home-manager.autoExpire = {
+    enable = true;
+    frequency = "weekly";
+    store.cleanup = true;
+    timestamp = "-7days";
+  };
+
   programs.home-manager.enable = true;
 }
 
