@@ -6,6 +6,7 @@
     defaultEditor = true;
 
     extraPackages = with pkgs; [
+      wl-clip-persist
       rust-analyzer
       nixd
       nil

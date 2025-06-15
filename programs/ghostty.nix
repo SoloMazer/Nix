@@ -24,12 +24,12 @@
         "alt+shift+j=new_split:down"
         "alt+shift+k=new_split:up"
         "alt+shift+l=new_split:right"
-        
+
         "alt+ctrl+h=resize_split:left,10"
         "alt+ctrl+j=resize_split:down,10"
         "alt+ctrl+k=resize_split:up,10"
         "alt+ctrl+l=resize_split:right,10"
-        "alt+ctrl+plus=equalize_splits"
+        "alt+ctrl+e=equalize_splits"
 
         "alt+t=new_tab"
         "alt+q=text:\"exit\\n\""

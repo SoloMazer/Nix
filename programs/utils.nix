@@ -1,40 +1,9 @@
 { pkgs, ... }: {
 
-  home.packages = with pkgs; [
-    wl-clip-persist
-  ];
-
-  programs.fish = {
-    enable = true;
-    preferAbbrs = true;
-    shellAbbrs = {
-      ":q" = "exit";
-      c = "clear";
-      ls = "eza";
-      cd = "z";
-      tree = "eza --tree";
-    };
-    interactiveShellInit = ''
-      set fish_greeting
-    '';
-    plugins = [
-      {
-        name = "pure";
-        src = pkgs.fishPlugins.pure.src;
-      }
-    ];
-  };
-
   programs.git = {
     enable = true;
     userName = "SoloMazer";
     userEmail = "solomazer@gmail.com";
-  };
-
-  programs.zoxide = {
-    enable = true;
-    enableBashIntegration = true;
-    enableFishIntegration = true;
   };
 
   programs.fzf = {
@@ -55,10 +24,17 @@
     };
   };
 
+  programs.zoxide = {
+    enable = true;
+    enableBashIntegration = true;
+    enableFishIntegration = true;
+  };
+
   programs.eza = {
     enable = true;
     theme = "gruvbox-dark";
     enableFishIntegration = true;
+    enableBashIntegration = true;
   };
 
   programs.fd.enable = true;

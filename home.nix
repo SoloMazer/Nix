@@ -7,6 +7,7 @@
     ./programs/chromium.nix
     ./programs/steam.nix
     ./programs/utils.nix
+    ./programs/fish.nix
     ./programs/gnome.nix
   ];
 
@@ -23,13 +24,15 @@
     loupe
     wike
     varia
-    nerd-fonts.hurmit
     inkscape
     resources
     endeavour
     papers
     deja-dup
     amberol
+
+    nerd-fonts.hurmit
+    libertinus
 
   ];
 
