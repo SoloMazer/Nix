@@ -1,14 +1,24 @@
 { pkgs, ... }:
 {
   imports = [
+
     ./programs/helix.nix
     ./programs/ghostty.nix
+    ./programs/git.nix
+    ./programs/zoxide.nix
+    ./programs/fzf.nix
+    ./programs/eza.nix
+    ./programs/gitui.nix
+    ./programs/fd.nix
+    ./programs/ripgrep.nix
+    ./programs/fish.nix
+
     ./programs/librewolf.nix
     ./programs/chromium.nix
     ./programs/steam.nix
-    ./programs/utils.nix
-    ./programs/fish.nix
+    ./programs/retroarch.nix
     ./programs/gnome.nix
+
   ];
 
   home.username = "solomazer";

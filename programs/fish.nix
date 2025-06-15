@@ -8,12 +8,12 @@
       ls = "eza";
       cd = "z";
       tree = "eza --tree";
-      nxsh = "nix-shell --run fish";
+      nxsh = "nix-shell --run fish -p";
     };
     interactiveShellInit = #fish
       ''
         if test -n "$IN_NIX_SHELL"
-          echo -e "\n>> ENTERED NIX-SHELL <<\n"
+          echo -e "\n ฅ^•ﻌ•^ฅ Entered nix-shell \n"
         end
       '';
     plugins = [
