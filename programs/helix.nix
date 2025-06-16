@@ -25,6 +25,7 @@
         "down" = "no_op";
         "left" = "no_op";
         "right" = "no_op";
+        X = "select_line_above";
       };
 
       editor = {

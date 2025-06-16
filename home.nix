@@ -66,6 +66,12 @@
     timestamp = "-7days";
   };
 
+  # Enable flakes
+  nix = {
+    package = pkgs.nix;
+    settings.experimental-features = [ "nix-command" "flakes" ];
+  };
+
   programs.home-manager.enable = true;
 }
 

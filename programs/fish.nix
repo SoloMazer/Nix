@@ -13,7 +13,7 @@
     interactiveShellInit = #fish
       ''
         if test -n "$IN_NIX_SHELL"
-          echo -e "\n ฅ^•ﻌ•^ฅ Entered nix-shell \n"
+          echo -e "\n Booted into nix-shell!! ฅ^•ﻌ•^ฅ \n"
         end
       '';
     plugins = [
