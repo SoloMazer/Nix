@@ -40,10 +40,10 @@
     papers
     deja-dup
     amberol
+    ente-auth
 
     nerd-fonts.hurmit
-    libertinus
-
+    cantarell-fonts
   ];
 
   home.sessionVariables = {
@@ -70,6 +70,15 @@
   nix = {
     package = pkgs.nix;
     settings.experimental-features = [ "nix-command" "flakes" ];
+  };
+
+  fonts.fontconfig = {
+    enable = true;
+    defaultFonts = {
+      serif = [ "Cantarell" ];
+      sansSerif = [ "Cantarell" ];
+      monospace = [ "Hurmit Nerd Font Mono" ];
+    };
   };
 
   programs.home-manager.enable = true;

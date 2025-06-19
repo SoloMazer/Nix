@@ -1,7 +1,6 @@
 { pkgs, ... }: {
 
   home.packages = with pkgs; [
-    cantarell-fonts
     gnomeExtensions.blur-my-shell
     gnomeExtensions.tactile
     gnomeExtensions.just-perfection

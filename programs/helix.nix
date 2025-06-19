@@ -14,6 +14,7 @@
       marksman
       markdown-oxide
       texlab
+      bash-language-server
     ];
 
     settings = {
