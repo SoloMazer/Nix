@@ -14,11 +14,9 @@
     ./programs/fish.nix
 
     ./programs/librewolf.nix
-    ./programs/chromium.nix
     ./programs/steam.nix
     ./programs/retroarch.nix
     ./programs/gnome.nix
-
   ];
 
   home.username = "solomazer";
@@ -36,10 +34,10 @@
     varia
     inkscape
     resources
-    endeavour
     papers
     deja-dup
-    amberol
+    errands
+    gapless
     ente-auth
 
     nerd-fonts.hurmit
