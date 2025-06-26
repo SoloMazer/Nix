@@ -6,6 +6,7 @@
     extraPackages = with pkgs; [
       wl-clip-persist
       bash-language-server
+      shfmt
       lldb
       nixd
       alejandra
@@ -36,6 +37,11 @@
           name = "nix";
           auto-format = true;
           formatter.command = "alejandra";
+        }
+        {
+          name = "bash";
+          auto-format = true;
+          formatter.command = "shfmt";
         }
         {
           name = "markdown";

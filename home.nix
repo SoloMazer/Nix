@@ -38,6 +38,7 @@
     parabolic
 
     manix
+    shellcheck
 
     nerd-fonts.hurmit
     cantarell-fonts
