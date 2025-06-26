@@ -13,7 +13,6 @@
       tinymist
       typstyle
       marksman
-      mdformat
       texlab
       tex-fmt
       rust-analyzer
@@ -42,11 +41,6 @@
           name = "bash";
           auto-format = true;
           formatter.command = "shfmt";
-        }
-        {
-          name = "markdown";
-          auto-format = true;
-          formatter.command = "mdformat";
         }
         {
           name = "latex";
