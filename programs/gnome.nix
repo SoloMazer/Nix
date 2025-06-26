@@ -1,5 +1,4 @@
-{ pkgs, ... }: {
-
+{pkgs, ...}: {
   home.packages = with pkgs; [
     gnomeExtensions.blur-my-shell
     gnomeExtensions.tactile

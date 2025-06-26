@@ -1,7 +1,5 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   programs.helix = {
-
     enable = true;
     defaultEditor = true;
 
@@ -10,6 +8,7 @@
       rust-analyzer
       nixd
       nil
+      alejandra
       tinymist
       typstyle
       marksman
@@ -19,15 +18,21 @@
     ];
 
     languages = {
-      language = [{
-        name = "typst";
-        auto-format = true;
-        formatter.command = "typstyle";
-      }];
+      language = [
+        {
+          name = "typst";
+          auto-format = true;
+          formatter.command = "typstyle";
+        }
+        {
+          name = "nix";
+          auto-format = true;
+          formatter.command = "alejandra";
+        }
+      ];
     };
 
     settings = {
-
       theme = "gruvbox_transparent";
 
       keys.normal = {
@@ -43,7 +48,7 @@
       editor = {
         mouse = false;
         line-number = "relative";
-        gutters = [ "diagnostics" "line-numbers" "spacer" "diff" ];
+        gutters = ["diagnostics" "line-numbers" "spacer" "diff"];
         completion-replace = true;
         whitespace.render.space = "all";
 
@@ -76,9 +81,8 @@
     themes = {
       gruvbox_transparent = {
         "inherits" = "gruvbox";
-        "ui.background" = { };
+        "ui.background" = {};
       };
     };
-
   };
 }

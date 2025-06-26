@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   programs.fish = {
     enable = true;
     preferAbbrs = true;
@@ -10,7 +10,8 @@
       tree = "eza --tree";
       nxsh = "nix-shell --run fish -p";
     };
-    interactiveShellInit = #fish
+    interactiveShellInit =
+      #fish
       ''
         if test -n "$IN_NIX_SHELL"
           echo -e "\n Booted into nix-shell!! ฅ^•ﻌ•^ฅ \n"

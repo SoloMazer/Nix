@@ -1,7 +1,5 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   imports = [
-
     ./programs/helix.nix
     ./programs/ghostty.nix
     ./programs/git.nix
@@ -39,6 +37,8 @@
     localsend
     parabolic
 
+    manix
+
     nerd-fonts.hurmit
     cantarell-fonts
     newcomputermodern
@@ -67,19 +67,17 @@
   # Enable flakes
   nix = {
     package = pkgs.nix;
-    settings.experimental-features = [ "nix-command" "flakes" ];
+    settings.experimental-features = ["nix-command" "flakes"];
   };
 
   fonts.fontconfig = {
     enable = true;
     defaultFonts = {
-      serif = [ "Cantarell" ];
-      sansSerif = [ "Cantarell" ];
-      monospace = [ "Hurmit Nerd Font Mono" ];
+      serif = ["Cantarell"];
+      sansSerif = ["Cantarell"];
+      monospace = ["Hurmit Nerd Font Mono"];
     };
   };
 
   programs.home-manager.enable = true;
 }
-
-
