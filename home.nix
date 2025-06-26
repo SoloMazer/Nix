@@ -8,7 +8,7 @@
     ./programs/zoxide.nix
     ./programs/fzf.nix
     ./programs/eza.nix
-    ./programs/gitui.nix
+    ./programs/lazygit.nix
     ./programs/fd.nix
     ./programs/ripgrep.nix
     ./programs/fish.nix
@@ -24,9 +24,6 @@
   home.stateVersion = "25.05";
 
   home.packages = with pkgs; [
-
-    obsidian
-
     rnote
     vlc
     loupe
@@ -39,14 +36,17 @@
     errands
     gapless
     ente-auth
+    localsend
+    parabolic
 
     nerd-fonts.hurmit
     cantarell-fonts
+    newcomputermodern
+    libertinus
   ];
 
   home.sessionVariables = {
-    EDITOR = "hx";
-    BROWSER = "firefox";
+    BROWSER = "librewolf";
     TERMINAL = "ghostty";
   };
 

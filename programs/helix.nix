@@ -11,11 +11,20 @@
       nixd
       nil
       tinymist
+      typstyle
       marksman
       markdown-oxide
       texlab
       bash-language-server
     ];
+
+    languages = {
+      language = [{
+        name = "typst";
+        auto-format = true;
+        formatter.command = "typstyle";
+      }];
+    };
 
     settings = {
 
@@ -27,6 +36,8 @@
         "left" = "no_op";
         "right" = "no_op";
         X = "select_line_above";
+        A = "insert_at_line_start";
+        I = "append_mode";
       };
 
       editor = {
