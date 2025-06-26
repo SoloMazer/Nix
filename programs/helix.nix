@@ -5,19 +5,27 @@
 
     extraPackages = with pkgs; [
       wl-clip-persist
-      rust-analyzer
+      bash-language-server
+      lldb
       nixd
-      nil
       alejandra
       tinymist
       typstyle
       marksman
-      markdown-oxide
+      mdformat
       texlab
-      bash-language-server
+      tex-fmt
+      rust-analyzer
+      rustfmt
     ];
 
     languages = {
+      language-server.nixd = {
+        command = "nixd";
+        formatting.command = ["alejandra"];
+        nixpkgs.expr = "import (builtins.getFlake \"/etc/nixos\").inputs.nixpkgs { }";
+        options.nixos.expr = "(builtins.getFlake \"/etc/nixos\").nixosConfigurations.bld0.options";
+      };
       language = [
         {
           name = "typst";
@@ -28,6 +36,21 @@
           name = "nix";
           auto-format = true;
           formatter.command = "alejandra";
+        }
+        {
+          name = "markdown";
+          auto-format = true;
+          formatter.command = "mdformat";
+        }
+        {
+          name = "latex";
+          auto-format = true;
+          formatter.command = "tex-fmt";
+        }
+        {
+          name = "rust";
+          auto-format = true;
+          formatter.command = "rustfmt";
         }
       ];
     };
@@ -41,8 +64,6 @@
         "left" = "no_op";
         "right" = "no_op";
         X = "select_line_above";
-        A = "insert_at_line_start";
-        I = "append_mode";
       };
 
       editor = {
