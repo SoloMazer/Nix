@@ -10,6 +10,7 @@
       lldb
       nixd
       alejandra
+      typst
       tinymist
       typstyle
       marksman

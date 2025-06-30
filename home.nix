@@ -10,9 +10,11 @@
     ./programs/fd.nix
     ./programs/ripgrep.nix
     ./programs/fish.nix
+    ./programs/zk.nix
 
     ./programs/librewolf.nix
     ./programs/steam.nix
+    ./programs/sioyek.nix
     ./programs/retroarch.nix
     ./programs/gnome.nix
   ];
@@ -22,6 +24,8 @@
   home.stateVersion = "25.05";
 
   home.packages = with pkgs; [
+    google-chrome
+
     rnote
     vlc
     loupe
@@ -29,7 +33,6 @@
     varia
     inkscape
     resources
-    papers
     deja-dup
     errands
     gapless
@@ -38,7 +41,6 @@
     parabolic
 
     manix
-    shellcheck
 
     nerd-fonts.hurmit
     cantarell-fonts
@@ -49,6 +51,8 @@
   home.sessionVariables = {
     BROWSER = "librewolf";
     TERMINAL = "ghostty";
+    EDITOR = "hx";
+    VISUAL = "hx";
   };
 
   # Enable Automatic Updates
