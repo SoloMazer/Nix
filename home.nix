@@ -11,7 +11,8 @@
     ./programs/ripgrep.nix
     ./programs/fish.nix
     ./programs/zk.nix
-
+    ./programs/yazi.nix
+    # ./programs/kitty.nix
     ./programs/librewolf.nix
     ./programs/steam.nix
     ./programs/sioyek.nix
@@ -39,6 +40,7 @@
     ente-auth
     localsend
     parabolic
+    tor-browser
 
     manix
 
@@ -75,6 +77,7 @@
     settings.experimental-features = ["nix-command" "flakes"];
   };
 
+  # Set fonts at user level
   fonts.fontconfig = {
     enable = true;
     defaultFonts = {

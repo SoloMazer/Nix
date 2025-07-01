@@ -1,6 +1,11 @@
 {
+  pkgs,
+  inputs,
+  ...
+}: {
   programs.ghostty = {
     enable = true;
+    package = inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default;
     settings = {
       theme = "GruvboxDark";
       font-family = "Hurmit Nerd Font";

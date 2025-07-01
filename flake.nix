@@ -7,11 +7,15 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
+    ghostty.url = "github:ghostty-org/ghostty"; # Use project flake directly for rapid bugfixes
   };
 
   outputs = {
     nixpkgs,
+    nixpkgs-stable,
     home-manager,
+    ghostty,
     ...
   } @ inputs: let
     system = "x86_64-linux";
