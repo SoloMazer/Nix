@@ -41,6 +41,8 @@
     localsend
     parabolic
     tor-browser
+    mailspring
+    zenity
 
     manix
 
