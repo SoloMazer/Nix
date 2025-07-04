@@ -6,7 +6,7 @@
     ./programs/zoxide.nix
     ./programs/fzf.nix
     ./programs/eza.nix
-    ./programs/lazygit.nix
+    ./programs/gitui.nix
     ./programs/fd.nix
     ./programs/ripgrep.nix
     ./programs/fish.nix
@@ -25,14 +25,14 @@
   home.stateVersion = "25.05";
 
   home.packages = with pkgs; [
+    # Closed Sourced
     google-chrome
-
+    # GUIs
     rnote
     vlc
     loupe
     wike
     varia
-    inkscape
     resources
     deja-dup
     errands
@@ -42,10 +42,14 @@
     parabolic
     tor-browser
     mailspring
-    zenity
-
+    gradia
+    ardour
+    libreoffice-fresh
+    # CLIs/TUIs
     manix
-
+    zenity
+    typst
+    # Others
     nerd-fonts.hurmit
     cantarell-fonts
     newcomputermodern

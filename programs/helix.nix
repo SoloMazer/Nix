@@ -7,10 +7,8 @@
       wl-clip-persist
       bash-language-server
       shfmt
-      lldb
       nixd
       alejandra
-      typst
       tinymist
       typstyle
       marksman
@@ -26,6 +24,10 @@
         formatting.command = ["alejandra"];
         nixpkgs.expr = "import (builtins.getFlake \"/etc/nixos\").inputs.nixpkgs { }";
         options.nixos.expr = "(builtins.getFlake \"/etc/nixos\").nixosConfigurations.bld0.options";
+      };
+      language-server.zk-lsp = {
+        command = "zk";
+        args = ["lsp"];
       };
       language = [
         {
@@ -53,6 +55,11 @@
           auto-format = true;
           formatter.command = "rustfmt";
         }
+        {
+          name = "markdown";
+          roots = [".zk"];
+          language-servers = ["zk-lsp"];
+        }
       ];
     };
 
@@ -73,6 +80,7 @@
         gutters = ["diagnostics" "line-numbers" "spacer" "diff"];
         completion-replace = true;
         whitespace.render.space = "all";
+        rulers = [125];
 
         lsp = {
           display-messages = true;
