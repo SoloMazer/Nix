@@ -9,6 +9,7 @@
       cd = "z";
       tree = "eza --tree";
       nxsh = "nix-shell --run fish -p";
+      glog = "git log --graph --decorate --all --oneline";
     };
     interactiveShellInit =
       #fish

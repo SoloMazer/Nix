@@ -5,15 +5,11 @@
 
     extraPackages = with pkgs; [
       wl-clip-persist
-      bash-language-server
-      shfmt
       nixd
       alejandra
       tinymist
       typstyle
       marksman
-      texlab
-      tex-fmt
       rust-analyzer
       rustfmt
     ];
@@ -22,8 +18,9 @@
       language-server.nixd = {
         command = "nixd";
         formatting.command = ["alejandra"];
-        nixpkgs.expr = "import (builtins.getFlake \"/etc/nixos\").inputs.nixpkgs { }";
-        options.nixos.expr = "(builtins.getFlake \"/etc/nixos\").nixosConfigurations.bld0.options";
+        nixpkgs.expr = "import (builtins.getFlake \"$HOME/.config/nixos\").inputs.nixpkgs { }";
+        options.nixos.expr = "(builtins.getFlake \"$HOME/.config/nixos\").nixosConfigurations.voidheart.options";
+        options.home-manager.expr = "(builtins.getFlake \"$HOME/.config/home-manager\").homeConfigurations.solomazer.options";
       };
       language-server.zk-lsp = {
         command = "zk";
@@ -39,16 +36,6 @@
           name = "nix";
           auto-format = true;
           formatter.command = "alejandra";
-        }
-        {
-          name = "bash";
-          auto-format = true;
-          formatter.command = "shfmt";
-        }
-        {
-          name = "latex";
-          auto-format = true;
-          formatter.command = "tex-fmt";
         }
         {
           name = "rust";
@@ -97,7 +84,7 @@
 
         indent-guides = {
           render = true;
-          character = "│";
+          character = "┊";
           skip-levels = 1;
         };
 

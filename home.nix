@@ -37,7 +37,6 @@
     deja-dup
     errands
     gapless
-    ente-auth
     localsend
     parabolic
     tor-browser
@@ -45,10 +44,11 @@
     gradia
     ardour
     libreoffice-fresh
+    libresprite
     # CLIs/TUIs
     manix
-    zenity
     typst
+    bottom
     # Others
     nerd-fonts.hurmit
     cantarell-fonts
