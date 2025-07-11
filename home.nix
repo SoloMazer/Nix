@@ -41,12 +41,10 @@
     parabolic
     tor-browser
     mailspring
-    gradia
     ardour
     libreoffice-fresh
     libresprite
     # CLIs/TUIs
-    manix
     typst
     bottom
     # Others
@@ -61,20 +59,6 @@
     TERMINAL = "ghostty";
     EDITOR = "hx";
     VISUAL = "hx";
-  };
-
-  # Enable Automatic Updates
-  services.home-manager.autoUpgrade = {
-    enable = true;
-    frequency = "daily";
-  };
-
-  # Enable Autoexpire in home manager
-  services.home-manager.autoExpire = {
-    enable = true;
-    frequency = "weekly";
-    store.cleanup = true;
-    timestamp = "-7days";
   };
 
   # Enable flakes

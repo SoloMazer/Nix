@@ -3,6 +3,9 @@
     gnomeExtensions.blur-my-shell
     gnomeExtensions.tactile
     gnomeExtensions.just-perfection
+    gnomeExtensions.appindicator
+    gnomeExtensions.places-status-indicator
+    gnomeExtensions.rounded-window-corners-reborn
   ];
 
   gtk = {
