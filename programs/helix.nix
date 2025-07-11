@@ -10,25 +10,36 @@
       tinymist
       typstyle
       marksman
-      rust-analyzer
-      rustfmt
     ];
 
     languages = {
-      language-server.nixd = {
-        command = "nixd";
-        formatting.command = ["alejandra"];
-        nixpkgs.expr = "import (builtins.getFlake \"$HOME/.config/nixos\").inputs.nixpkgs { }";
-        options.nixos.expr = "(builtins.getFlake \"$HOME/.config/nixos\").nixosConfigurations.voidheart.options";
-        options.home-manager.expr = "(builtins.getFlake \"$HOME/.config/home-manager\").homeConfigurations.solomazer.options";
-      };
-      language-server.zk-lsp = {
-        command = "zk";
-        args = ["lsp"];
+      language-server = {
+        nixd = {
+          command = "nixd";
+          formatting.command = ["alejandra"];
+          nixpkgs.expr = "import (builtins.getFlake \"$HOME/.config/nixos\").inputs.nixpkgs { }";
+          options.nixos.expr = "(builtins.getFlake \"$HOME/.config/nixos\").nixosConfigurations.voidheart.options";
+          options.home-manager.expr = "(builtins.getFlake \"$HOME/.config/home-manager\").homeConfigurations.solomazer.options";
+        };
+        tinymist = {
+          command = "tinymist";
+          config = {
+            exportPDF = "onType";
+            preview.background = {
+              enabled = true;
+              args = ["--open"];
+            };
+          };
+        };
+        zk-lsp = {
+          command = "zk";
+          args = ["lsp"];
+        };
       };
       language = [
         {
           name = "typst";
+          language-servers = ["tinymist"];
           auto-format = true;
           formatter.command = "typstyle";
         }

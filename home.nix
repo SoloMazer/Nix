@@ -44,6 +44,7 @@
     ardour
     libreoffice-fresh
     libresprite
+    bottles
     # CLIs/TUIs
     typst
     bottom
@@ -59,12 +60,6 @@
     TERMINAL = "ghostty";
     EDITOR = "hx";
     VISUAL = "hx";
-  };
-
-  # Enable flakes
-  nix = {
-    package = pkgs.nix;
-    settings.experimental-features = ["nix-command" "flakes"];
   };
 
   # Set fonts at user level

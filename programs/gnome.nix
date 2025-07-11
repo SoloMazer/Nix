@@ -1,10 +1,9 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     gnomeExtensions.blur-my-shell
+    gnomeExtensions.appindicator
     gnomeExtensions.tactile
     gnomeExtensions.just-perfection
-    gnomeExtensions.appindicator
-    gnomeExtensions.places-status-indicator
     gnomeExtensions.rounded-window-corners-reborn
   ];
 
