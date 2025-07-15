@@ -14,6 +14,7 @@
     ./programs/yazi.nix
     # ./programs/kitty.nix
     ./programs/librewolf.nix
+    ./programs/zen-browser.nix
     ./programs/steam.nix
     ./programs/sioyek.nix
     ./programs/retroarch.nix
@@ -45,6 +46,8 @@
     libreoffice-fresh
     libresprite
     bottles
+    scrcpy
+    inkscape
     # CLIs/TUIs
     typst
     bottom
