@@ -51,6 +51,7 @@
     # CLIs/TUIs
     typst
     bottom
+    gemini-cli
     # Others
     nerd-fonts.hurmit
     cantarell-fonts

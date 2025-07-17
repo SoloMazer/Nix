@@ -11,7 +11,7 @@
       font-family = "Hurmit Nerd Font";
       font-size = 12;
       gtk-titlebar = false;
-      background-opacity = 0.85;
+      background-opacity = 0.875;
       mouse-hide-while-typing = true;
       window-theme = "ghostty";
       window-titlebar-background = "282828";

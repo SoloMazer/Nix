@@ -4,7 +4,6 @@
     gnomeExtensions.appindicator
     gnomeExtensions.tactile
     gnomeExtensions.just-perfection
-    gnomeExtensions.rounded-window-corners-reborn
   ];
 
   gtk = {
