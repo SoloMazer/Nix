@@ -18,7 +18,6 @@
       window-titlebar-foreground = "ebdbb2";
       window-padding-balance = true;
       window-padding-color = "extend";
-
       keybind = [
         "alt+h=goto_split:left"
         "alt+j=goto_split:down"

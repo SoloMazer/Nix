@@ -1,4 +1,8 @@
 {pkgs, ...}: {
+  home.username = "solomazer";
+  home.homeDirectory = "/home/solomazer";
+  home.stateVersion = "25.05";
+
   imports = [
     ./programs/helix.nix
     ./programs/ghostty.nix
@@ -11,19 +15,15 @@
     ./programs/ripgrep.nix
     ./programs/fish.nix
     ./programs/zk.nix
-    ./programs/yazi.nix
+    # ./programs/yazi.nix
     # ./programs/kitty.nix
-    ./programs/librewolf.nix
+    # ./programs/librewolf.nix
     ./programs/zen-browser.nix
     ./programs/steam.nix
     ./programs/sioyek.nix
     ./programs/retroarch.nix
     ./programs/gnome.nix
   ];
-
-  home.username = "solomazer";
-  home.homeDirectory = "/home/solomazer";
-  home.stateVersion = "25.05";
 
   home.packages = with pkgs; [
     # Closed Sourced
@@ -66,7 +66,6 @@
     VISUAL = "hx";
   };
 
-  # Set fonts at user level
   fonts.fontconfig = {
     enable = true;
     defaultFonts = {

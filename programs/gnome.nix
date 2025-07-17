@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     gnomeExtensions.blur-my-shell
-    gnomeExtensions.appindicator
+    # gnomeExtensions.appindicator
     gnomeExtensions.tactile
     gnomeExtensions.just-perfection
   ];
